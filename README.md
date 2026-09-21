@@ -91,3 +91,7 @@ components/critique  Lienzo, pins, composer, registro y barra de herramientas
 components/ui        Botón y diálogo de confirmación
 lib/critique         Tipos, reducer, store y persistencia local
 ```
+
+## Licencia
+
+[MIT](LICENSE)
