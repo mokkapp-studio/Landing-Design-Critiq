@@ -1,26 +1,240 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Tokens: espejo exacto de /tokens.md.
+ * No edites un valor aquí sin editarlo primero en tokens.md.
+ * `npm run tokens:check` verifica que ambos coinciden.
+ */
+
+@theme static {
+  /* Desactiva la paleta y escalas por defecto de Tailwind */
+  --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --text-*: initial;
+  --tracking-*: initial;
+
+  /* 1. Color — tinta */
+  --color-ink-950: #0c0d0f;
+  --color-ink-900: #16171a;
+  --color-ink-850: #1b1c20;
+  --color-ink-800: #222328;
+  --color-ink-700: #2d2f35;
+  --color-ink-600: #3e4148;
+  --color-ink-500: #62666e;
+  --color-ink-400: #9195a0;
+  --color-ink-300: #b6b9c0;
+  --color-ink-200: #d6d8dc;
+  --color-ink-100: #eceeec;
+
+  /* 1. Color — luz */
+  --color-light-0: #fbfcfa;
+  --color-light-50: #f4f5f2;
+  --color-light-200: #dcdfd9;
+  --color-light-400: #686d65;
+
+  /* 1. Color — marca */
+  --color-marker-400: #f06455;
+  --color-marker-500: #d92f24;
+  --color-marker-600: #b8261d;
+
+  /* 1. Color — señal */
+  --color-warn-400: #e5ad35;
+
+  /* 2. Roles semánticos */
+  --color-bg: var(--color-ink-900);
+  --color-desk: var(--color-ink-950);
+  --color-surface: var(--color-ink-850);
+  --color-raised: var(--color-ink-800);
+  --color-line: var(--color-ink-700);
+  --color-line-strong: var(--color-ink-600);
+  --color-text: var(--color-ink-100);
+  --color-muted: var(--color-ink-400);
+  --color-faint: var(--color-ink-500);
+  --color-stage: var(--color-light-50);
+  --color-stage-line: var(--color-light-200);
+  --color-stage-muted: var(--color-light-400);
+  --color-stage-ink: var(--color-ink-900);
+  --color-action: var(--color-light-50);
+  --color-action-hover: var(--color-light-0);
+  --color-mark: var(--color-marker-500);
+  --color-mark-active: var(--color-marker-600);
+  --color-mark-text: var(--color-marker-400);
+  --color-on-mark: var(--color-light-0);
+  --color-warn: var(--color-warn-400);
+  --color-focus: var(--color-light-50);
+
+  /* 3. Tipografía */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.5rem;
+  --text-xl--line-height: 1.875rem;
+  --text-2xl: 2.25rem;
+  --text-2xl--line-height: 2.5rem;
+  --text-display: clamp(2.75rem, 1.5rem + 4vw, 5rem);
+  --text-display--line-height: 0.98;
+
+  --tracking-display: -0.035em;
+  --tracking-mono: -0.01em;
+  --tracking-label: 0.06em;
+
+  /* 4. Espaciado */
+  --spacing: 0.25rem;
+  --spacing-toolbar: 3.5rem;
+  --spacing-panel: 22rem;
+  --spacing-pin: 1.75rem;
+  --spacing-ruler: 1.75rem;
+  --container-page: 76rem;
+  --container-prose: 36rem;
+
+  /* 5. Radios */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-full: 9999px;
+  --radius-pin: 9999px 9999px 9999px 2px;
+
+  /* 6. Sombras */
+  --shadow-sheet: 0 1px 2px rgb(0 0 0 / 0.5), 0 16px 40px -12px rgb(0 0 0 / 0.7);
+  --shadow-pin: 0 1px 2px rgb(0 0 0 / 0.45), 0 3px 8px rgb(0 0 0 / 0.3);
+  --shadow-popover: 0 2px 4px rgb(0 0 0 / 0.4), 0 20px 48px -16px rgb(0 0 0 / 0.8);
+
+  /* 7. Movimiento */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+
+  /* 8. Capas */
+  --z-pin: 10;
+  --z-pin-active: 20;
+  --z-overlay: 50;
 }
 
+/* Las familias vienen de next/font, que define --font-geist-sans y --font-geist-mono en <html> */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------- Roles tipográficos (ver tokens.md §3) ---------- */
+
+@utility type-display {
+  font-size: var(--text-display);
+  line-height: var(--text-display--line-height);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+@utility type-title {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+  font-weight: 650;
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+@utility type-label {
+  font-size: var(--text-xs);
+  line-height: var(--text-xs--line-height);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+/* Números de pin, recuentos, zoom y dimensiones */
+@utility type-numeral {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* Texto de una crítica: se lee como una anotación, no como prosa de interfaz */
+@utility type-annotation {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
+  letter-spacing: var(--tracking-mono);
+}
+
+/* Coordenadas y metadatos medibles */
+@utility type-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: var(--text-xs--line-height);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* ---------- Movimiento ---------- */
+
+/* El composer se despega del pin hacia arriba, sin rebote */
+@keyframes composer-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------- Base ---------- */
+
+@layer base {
+  html {
+    color-scheme: dark;
+    background: var(--color-bg);
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-light-50);
+    color: var(--color-stage-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+
+  textarea,
+  input {
+    caret-color: var(--color-light-50);
+  }
+
+  textarea::placeholder,
+  input::placeholder {
+    color: var(--color-muted);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0ms !important;
+      animation-duration: 0ms !important;
+    }
+  }
 }

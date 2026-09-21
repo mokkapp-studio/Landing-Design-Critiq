@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-18T00:00:00Z",
+  "title": "Design System: Critiq",
+  "extensions": {
+    "sourceOfTruth": "tokens.md (reflejado en app/globals.css; verificado por npm run tokens:check)",
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Escritorio grafito", "canonical": "var(--color-ink-900)", "tonalRamp": ["#0c0d0f", "#16171a", "#1b1c20", "#222328", "#2d2f35", "#3e4148", "#62666e", "#9195a0"] },
+      "desk": { "role": "neutral", "displayName": "Escritorio hundido", "canonical": "var(--color-ink-950)", "tonalRamp": ["#0c0d0f", "#16171a", "#1b1c20", "#222328", "#2d2f35", "#3e4148", "#62666e", "#9195a0"] },
+      "surface": { "role": "neutral", "displayName": "Superficie", "canonical": "var(--color-ink-850)" },
+      "raised": { "role": "neutral", "displayName": "Elevado", "canonical": "var(--color-ink-800)" },
+      "line": { "role": "neutral", "displayName": "Línea", "canonical": "var(--color-ink-700)" },
+      "line-strong": { "role": "neutral", "displayName": "Línea fuerte", "canonical": "var(--color-ink-600)" },
+      "text": { "role": "neutral", "displayName": "Texto", "canonical": "var(--color-ink-100)", "tonalRamp": ["#62666e", "#9195a0", "#b6b9c0", "#d6d8dc", "#eceeec", "#f4f5f2", "#fbfcfa", "#ffffff"] },
+      "muted": { "role": "neutral", "displayName": "Apagado", "canonical": "var(--color-ink-400)" },
+      "faint": { "role": "neutral", "displayName": "Tenue (no texto)", "canonical": "var(--color-ink-500)" },
+      "stage": { "role": "neutral", "displayName": "Escenario retroiluminado", "canonical": "var(--color-light-50)", "tonalRamp": ["#686d65", "#9ea39a", "#c2c6be", "#dcdfd9", "#e9ebe6", "#f4f5f2", "#f8f9f6", "#fbfcfa"] },
+      "stage-line": { "role": "neutral", "displayName": "Línea de escenario", "canonical": "var(--color-light-200)" },
+      "stage-muted": { "role": "neutral", "displayName": "Apagado de escenario", "canonical": "var(--color-light-400)" },
+      "stage-ink": { "role": "neutral", "displayName": "Tinta sobre escenario", "canonical": "var(--color-ink-900)" },
+      "action": { "role": "secondary", "displayName": "Luz encendida", "canonical": "var(--color-light-50)" },
+      "action-hover": { "role": "secondary", "displayName": "Luz máxima", "canonical": "var(--color-light-0)" },
+      "mark": { "role": "primary", "displayName": "Lápiz graso", "canonical": "var(--color-marker-500)", "tonalRamp": ["oklch(30% 0.12 28)", "oklch(40% 0.16 28)", "oklch(50% 0.19 28)", "#b8261d", "#d92f24", "#f06455", "oklch(80% 0.1 28)", "oklch(92% 0.04 28)"] },
+      "mark-active": { "role": "primary", "displayName": "Lápiz graso apretado", "canonical": "var(--color-marker-600)" },
+      "mark-text": { "role": "primary", "displayName": "Trazo de lápiz sobre tinta", "canonical": "var(--color-marker-400)" },
+      "on-mark": { "role": "primary", "displayName": "Luz sobre marca", "canonical": "var(--color-light-0)" },
+      "warn": { "role": "neutral", "displayName": "Aviso ámbar", "canonical": "var(--color-warn-400)", "tonalRamp": ["oklch(30% 0.07 80)", "oklch(42% 0.1 80)", "oklch(55% 0.12 80)", "oklch(66% 0.14 80)", "#e5ad35", "oklch(84% 0.12 85)", "oklch(90% 0.08 85)", "oklch(96% 0.03 85)"] },
+      "focus": { "role": "neutral", "displayName": "Foco de luz", "canonical": "var(--color-light-50)" },
+      "ink-700": { "role": "neutral", "displayName": "Tinta 700 (hover tonal)", "canonical": "var(--color-ink-700)" },
+      "ink-300": { "role": "neutral", "displayName": "Tinta 300 (texto sobre elevado)", "canonical": "var(--color-ink-300)" },
+      "ink-200": { "role": "neutral", "displayName": "Tinta 200 (crítica en reposo)", "canonical": "var(--color-ink-200)" },
+      "light-0": { "role": "neutral", "displayName": "Luz 0", "canonical": "var(--color-light-0)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Solo el titular del hero (type-display)." },
+      "title": { "displayName": "Título", "purpose": "Titulares de sección de la landing y del dropzone (type-title)." },
+      "body-landing": { "displayName": "Cuerpo landing", "purpose": "Párrafos de la landing, máx. --container-prose." },
+      "body": { "displayName": "Cuerpo", "purpose": "Cuerpo de interfaz por defecto." },
+      "control": { "displayName": "Control", "purpose": "Botones, filas, rótulos de zona literales." },
+      "annotation": { "displayName": "Anotación", "purpose": "Texto de cada crítica, en Geist Mono (type-annotation)." },
+      "numeral": { "displayName": "Numeral", "purpose": "Números de pin y de crítica, recuentos; Geist Mono tabular (type-numeral)." },
+      "meta": { "displayName": "Meta", "purpose": "Coordenadas, dimensiones, zoom, marcas de regla, atajos; Geist Mono tabular (type-meta)." }
+    },
+    "shadows": [
+      { "name": "sheet", "value": "0 1px 2px rgb(0 0 0 / 0.5), 0 16px 40px -12px rgb(0 0 0 / 0.7)", "purpose": "El diseño sobre el escritorio." },
+      { "name": "pin", "value": "0 1px 2px rgb(0 0 0 / 0.45), 0 3px 8px rgb(0 0 0 / 0.3)", "purpose": "Pin sobre el diseño." },
+      { "name": "popover", "value": "0 2px 4px rgb(0 0 0 / 0.4), 0 20px 48px -16px rgb(0 0 0 / 0.8)", "purpose": "Composer y diálogos." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Toda transición." },
+      { "name": "duration-fast", "value": "120ms", "purpose": "Hover y foco." },
+      { "name": "duration-base", "value": "200ms", "purpose": "Apertura de popovers (composer-in: 4px hacia arriba, escala 0.98 → 1, sin rebote)." }
+    ],
+    "zIndex": [
+      { "name": "z-pin", "value": "10" },
+      { "name": "z-pin-active", "value": "20" },
+      { "name": "z-overlay", "value": "50" }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "40rem" },
+      { "name": "md", "value": "48rem" },
+      { "name": "lg", "value": "64rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón encendido",
+      "kind": "button",
+      "refersTo": "button-lit",
+      "description": "Acción primaria de cada zona: un trozo de escenario sobre el escritorio.",
+      "html": "<button class=\"ds-btn-lit\">Empezar un critique</button>",
+      "css": ".ds-btn-lit { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: none; border-radius: var(--radius-sm, 4px); background: var(--color-action, #f4f5f2); color: var(--color-stage-ink, #16171a); font-family: var(--font-sans, Geist, system-ui, sans-serif); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-lit:hover { background: var(--color-action-hover, #fbfcfa); } .ds-btn-lit:focus-visible { outline: 2px solid var(--color-focus, #f4f5f2); outline-offset: 2px; } .ds-btn-lit:disabled { background: var(--color-raised, #222328); color: var(--color-faint, #62666e); }"
+    },
+    {
+      "name": "Botón tonal",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Acción secundaria: relleno tonal de tinta, sin contorno.",
+      "html": "<button class=\"ds-btn-line\">Cambiar diseño</button>",
+      "css": ".ds-btn-line { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: none; border-radius: var(--radius-sm, 4px); background: var(--color-raised, #222328); color: var(--color-text, #eceeec); font-family: var(--font-sans, Geist, system-ui, sans-serif); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-line:hover { background: var(--color-ink-700, #2d2f35); } .ds-btn-line:focus-visible { outline: 2px solid var(--color-focus, #f4f5f2); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botón silencioso",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Acciones de barra y de fila: solo texto o icono.",
+      "html": "<button class=\"ds-btn-quiet\">Vaciar registro</button>",
+      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; border: none; border-radius: var(--radius-sm, 4px); background: transparent; color: var(--color-ink-300, #b6b9c0); font-family: var(--font-sans, Geist, system-ui, sans-serif); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1), color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-quiet:hover { background: var(--color-raised, #222328); color: var(--color-text, #eceeec); } .ds-btn-quiet:focus-visible { outline: 2px solid var(--color-focus, #f4f5f2); outline-offset: 2px; }"
+    },
+    {
+      "name": "Pin",
+      "kind": "custom",
+      "refersTo": "pin",
+      "description": "Marca de lápiz graso anclada por la punta (esquina inferior izquierda); abierto, activo, borrador y resuelto.",
+      "html": "<div class=\"ds-pin-row\"><span class=\"ds-pin\">1</span><span class=\"ds-pin ds-pin--active\">2</span><span class=\"ds-pin ds-pin--draft\">3</span><span class=\"ds-pin\"><s>4</s></span></div>",
+      "css": ".ds-pin-row { display: flex; gap: 16px; align-items: flex-end; padding: 24px; background: var(--color-stage, #f4f5f2); border-radius: var(--radius-xs, 2px); } .ds-pin { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 9999px 9999px 9999px 2px; background: var(--color-mark, #d92f24); color: var(--color-on-mark, #fbfcfa); box-shadow: 0 0 0 2px var(--color-light-0, #fbfcfa), 0 1px 2px rgb(0 0 0 / 0.45), 0 3px 8px rgb(0 0 0 / 0.3); font-family: var(--font-mono, 'Geist Mono', ui-monospace, monospace); font-size: 0.75rem; font-weight: 500; font-variant-numeric: tabular-nums; transform-origin: bottom left; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1), scale 120ms cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; } .ds-pin:hover, .ds-pin--active { background: var(--color-mark-active, #b8261d); scale: 1.15; } .ds-pin--draft { background: var(--color-light-0, #fbfcfa); color: var(--color-mark, #d92f24); box-shadow: 0 0 0 2px var(--color-mark, #d92f24), 0 1px 2px rgb(0 0 0 / 0.45), 0 3px 8px rgb(0 0 0 / 0.3); } .ds-pin s { text-decoration-thickness: 2px; } .ds-pin:focus-visible { outline: 2px solid var(--color-focus, #f4f5f2); outline-offset: 2px; }"
+    },
+    {
+      "name": "Fila del registro",
+      "kind": "custom",
+      "refersTo": "registro-row-active",
+      "description": "Crítica en el registro: número en lápiz, texto en Geist Mono, coordenadas en meta; resuelta = tachada.",
+      "html": "<ol class=\"ds-log\"><li class=\"ds-log-row\"><span class=\"ds-log-num\">01</span><span><span class=\"ds-log-body\">El titular no dice qué hace el producto.</span><span class=\"ds-log-meta\">x 6.0 · y 22.0</span></span></li><li class=\"ds-log-row ds-log-row--active\"><span class=\"ds-log-num\">02</span><span><span class=\"ds-log-body\">Dos CTAs con el mismo peso.</span><span class=\"ds-log-meta\">x 30.0 · y 62.0</span></span></li><li class=\"ds-log-row ds-log-row--resolved\"><span class=\"ds-log-num\">03</span><span><span class=\"ds-log-body\">Logos sin contexto.</span><span class=\"ds-log-meta\">x 78.0 · y 86.0 · resuelta</span></span></li></ol>",
+      "css": ".ds-log { list-style: none; margin: 0; padding: 0; background: var(--color-bg, #16171a); width: 22rem; } .ds-log-row { display: flex; gap: 16px; padding: 14px 12px 14px 20px; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; } .ds-log-row:hover { background: var(--color-surface, #1b1c20); } .ds-log-row--active, .ds-log-row--active:hover { background: var(--color-raised, #222328); } .ds-log-num { width: 20px; flex-shrink: 0; font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.8125rem; font-weight: 500; font-variant-numeric: tabular-nums; color: var(--color-mark-text, #f06455); } .ds-log-body { display: block; font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.8125rem; line-height: 1.25rem; letter-spacing: -0.01em; color: var(--color-ink-200, #d6d8dc); } .ds-log-row:hover .ds-log-body, .ds-log-row--active .ds-log-body { color: var(--color-text, #eceeec); } .ds-log-meta { display: block; margin-top: 6px; font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.75rem; line-height: 1rem; font-variant-numeric: tabular-nums; color: var(--color-muted, #9195a0); } .ds-log-row--resolved .ds-log-num { color: var(--color-muted, #9195a0); text-decoration: line-through 2px var(--color-mark-text, #f06455); } .ds-log-row--resolved .ds-log-body, .ds-log-row--resolved:hover .ds-log-body { color: var(--color-muted, #9195a0); text-decoration: line-through var(--color-ink-500, #62666e); }"
+    },
+    {
+      "name": "Composer",
+      "kind": "input",
+      "refersTo": "composer",
+      "description": "Popover de crítica anclado al pin: cabecera con número y coordenadas, textarea en Geist Mono, pie tonal.",
+      "html": "<form class=\"ds-composer\"><div class=\"ds-composer-head\"><span class=\"ds-composer-num\">04</span><span class=\"ds-composer-meta\">x 42.1 · y 18.0</span></div><textarea class=\"ds-composer-input\" rows=\"3\" placeholder=\"¿Qué falla aquí y por qué?\"></textarea><div class=\"ds-composer-foot\"><span class=\"ds-composer-meta\">Enter guarda · Esc descarta</span><button type=\"button\" class=\"ds-composer-btn\">Añadir</button></div></form>",
+      "css": ".ds-composer { width: 22rem; border-radius: var(--radius-md, 6px); background: var(--color-raised, #222328); box-shadow: 0 2px 4px rgb(0 0 0 / 0.4), 0 20px 48px -16px rgb(0 0 0 / 0.8); color: var(--color-text, #eceeec); } .ds-composer-head { display: flex; align-items: baseline; gap: 12px; height: 44px; padding: 14px 16px 0; } .ds-composer-num { font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.8125rem; font-weight: 500; font-variant-numeric: tabular-nums; color: var(--color-mark-text, #f06455); } .ds-composer-meta { font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.75rem; line-height: 1rem; font-variant-numeric: tabular-nums; color: var(--color-muted, #9195a0); } .ds-composer-input { display: block; width: 100%; min-height: 80px; resize: none; border: none; background: transparent; padding: 0 16px 12px; font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.8125rem; line-height: 1.25rem; letter-spacing: -0.01em; color: var(--color-text, #eceeec); caret-color: var(--color-light-50, #f4f5f2); outline: none; } .ds-composer-input::placeholder { color: var(--color-muted, #9195a0); } .ds-composer-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 8px 8px 16px; background: var(--color-surface, #1b1c20); border-radius: 0 0 var(--radius-md, 6px) var(--radius-md, 6px); } .ds-composer-btn { height: 32px; padding: 0 12px; border: none; border-radius: var(--radius-sm, 4px); background: var(--color-action, #f4f5f2); color: var(--color-stage-ink, #16171a); font-family: var(--font-sans, Geist, sans-serif); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-composer-btn:hover { background: var(--color-action-hover, #fbfcfa); } .ds-composer-btn:focus-visible { outline: 2px solid var(--color-focus, #f4f5f2); outline-offset: 2px; }"
+    },
+    {
+      "name": "Regla del lienzo",
+      "kind": "custom",
+      "refersTo": "ruler-readout",
+      "description": "Regla en % sobre el escenario con lectura del cursor (luz) y del pin activo (lápiz).",
+      "html": "<div class=\"ds-ruler\"><span class=\"ds-tick ds-tick--major\" style=\"left:0%\"></span><span class=\"ds-tick\" style=\"left:12.5%\"></span><span class=\"ds-tick ds-tick--major\" style=\"left:25%\"></span><span class=\"ds-tick\" style=\"left:37.5%\"></span><span class=\"ds-tick ds-tick--major\" style=\"left:50%\"></span><span class=\"ds-tick\" style=\"left:62.5%\"></span><span class=\"ds-tick ds-tick--major\" style=\"left:75%\"></span><span class=\"ds-tick\" style=\"left:87.5%\"></span><span class=\"ds-tick ds-tick--major\" style=\"left:100%\"></span><span class=\"ds-num\" style=\"left:2px\">0</span><span class=\"ds-num\" style=\"left:25%\">25</span><span class=\"ds-num\" style=\"left:75%\">75</span><span class=\"ds-read\" style=\"left:42%\">42.1</span><span class=\"ds-read ds-read--pin\" style=\"left:60%\">60.0</span></div>",
+      "css": ".ds-ruler { position: relative; height: 1.75rem; width: 100%; min-width: 320px; background: var(--color-desk, #0c0d0f); } .ds-tick { position: absolute; bottom: 0; width: 1px; height: 4px; background: var(--color-ink-700, #2d2f35); transform: translateX(-50%); } .ds-tick--major { height: 10px; background: var(--color-ink-500, #62666e); } .ds-num, .ds-read { position: absolute; top: 4px; font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.75rem; line-height: 1rem; font-variant-numeric: tabular-nums; color: var(--color-muted, #9195a0); transform: translateX(-50%); } .ds-read { padding: 0 4px; border-radius: var(--radius-xs, 2px); background: var(--color-text, #eceeec); color: var(--color-stage-ink, #16171a); } .ds-read--pin { background: var(--color-mark, #d92f24); color: var(--color-on-mark, #fbfcfa); }"
+    },
+    {
+      "name": "Barra de herramientas",
+      "kind": "nav",
+      "refersTo": "toolbar",
+      "description": "Chrome fijo del workspace: logotipo con punto de lápiz, archivo y medidas en meta, zoom tonal y acciones.",
+      "html": "<header class=\"ds-toolbar\"><span class=\"ds-wordmark\">Critiq<span class=\"ds-dot\"></span></span><span class=\"ds-file\">landing-v3.png <span class=\"ds-dim\">1440 × 3200</span></span><span class=\"ds-zoom\">Ajustar</span><button class=\"ds-tb-line\">Cambiar diseño</button></header>",
+      "css": ".ds-toolbar { display: flex; align-items: center; gap: 20px; height: 3.5rem; padding: 0 12px 0 20px; background: var(--color-bg, #16171a); color: var(--color-text, #eceeec); font-family: var(--font-sans, Geist, sans-serif); } .ds-wordmark { display: inline-flex; align-items: baseline; gap: 4px; font-size: 1.125rem; font-weight: 700; letter-spacing: -0.035em; } .ds-dot { width: 6px; height: 6px; border-radius: 9999px; background: var(--color-mark, #d92f24); } .ds-file { font-size: 0.8125rem; color: var(--color-ink-300, #b6b9c0); } .ds-dim, .ds-zoom { font-family: var(--font-mono, 'Geist Mono', monospace); font-size: 0.75rem; font-variant-numeric: tabular-nums; color: var(--color-muted, #9195a0); } .ds-zoom { margin-left: auto; display: inline-flex; align-items: center; height: 32px; padding: 0 16px; border-radius: var(--radius-sm, 4px); background: var(--color-surface, #1b1c20); color: var(--color-ink-300, #b6b9c0); } .ds-tb-line { height: 32px; padding: 0 12px; border: none; border-radius: var(--radius-sm, 4px); background: var(--color-raised, #222328); color: var(--color-text, #eceeec); font: 500 0.8125rem var(--font-sans, Geist, sans-serif); cursor: pointer; transition: background-color 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-tb-line:hover { background: var(--color-ink-700, #2d2f35); } .ds-tb-line:focus-visible { outline: 2px solid var(--color-focus, #f4f5f2); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La mesa de luz",
+    "overview": "Critiq trata cada diseño como una hoja de contactos sobre la mesa de luz de un editor fotográfico. La única zona iluminada es el diseño en revisión (el escenario, `stage`); todo lo demás es escritorio grafito en penumbra (`bg`, `desk`, `surface`). La interfaz se retira hacia la sombra para que el diseño y sus marcas ocupen el protagonismo. Sobre la hoja solo escribe una tinta: el lápiz graso rojo, y solo para marcar críticas.\n\nEl sistema es denso, preciso y de instrumento. La interfaz habla en Geist Sans; todo lo que es anotación (números de pin, coordenadas, texto de crítica, medidas, zoom, recuentos) habla en Geist Mono, como una etiqueta escrita a mano sobre un contacto. El lienzo tiene reglas en % con lectura del cursor y del pin activo; los pins tienen tamaño fijo a cualquier zoom y se anclan por la punta a la coordenada exacta. El chrome es fijo; el escenario es la única zona viva.\n\nRechazo confirmado: el lienzo gris con panel blanco del SaaS de feedback.",
+    "keyCharacteristics": [
+      "Escritorio grafito oscuro con un único escenario claro retroiluminado.",
+      "Una sola tinta de señal (lápiz graso rojo) reservada a las marcas de crítica.",
+      "Acciones primarias \"encendidas\": relleno de luz, texto grafito.",
+      "Geist Sans para la interfaz, Geist Mono para toda anotación y medida.",
+      "Zonas separadas por tono, no por bordes; radios pequeños de hoja.",
+      "Estado como marca: resuelto = tachado, mismo color.",
+      "Pins anclados por la punta, tamaño fijo; reglas en % sobre el escenario."
+    ],
+    "rules": [
+      { "name": "La Regla del Lápiz Graso", "body": "El rojo (`mark`, `mark-active`, `mark-text`) solo marca críticas: pins, números de crítica, la coordenada del pin activo en las reglas y el punto del logotipo. Nunca botones, enlaces, errores ni decoración. Si algo rojo no es una crítica, está mal.", "section": "colors" },
+      { "name": "La Regla de la Única Luz", "body": "Lo claro es el escenario. Solo el diseño revisado, la acción encendida, las lecturas del cursor y las secciones que *son* escenario usan la familia `light`/`stage`. Ningún panel de interfaz es claro.", "section": "colors" },
+      { "name": "La Regla del Error Ámbar", "body": "Los errores y avisos usan `warn`, nunca `mark`: el rojo ya significa \"crítica\".", "section": "colors" },
+      { "name": "La Regla de la Anotación", "body": "Si es un número, una coordenada, una medida o el texto de una crítica, va en Geist Mono (`type-numeral`, `type-annotation`, `type-meta`). Si es interfaz, va en Geist Sans. Nunca al revés.", "section": "typography" },
+      { "name": "La Regla del Tamaño, Peso y Tracking", "body": "Geist no tiene eje de ancho: la jerarquía se construye solo con tamaño, peso y `--tracking-*`. No se simulan variantes condensadas.", "section": "typography" },
+      { "name": "La Regla del Rótulo Literal", "body": "Cada zona se rotula con su nombre literal (\"Registro\", \"Diseño de ejemplo\", \"Ficticio\") en tamaño de control o meta. No hay antetítulos ni kickers sobre los titulares.", "section": "typography" },
+      { "name": "La Regla del Chrome Fijo", "body": "El escenario es la única zona viva. Barra, registro y reglas no cambian de tamaño ni se mueven con el diseño.", "section": "layout" },
+      { "name": "La Regla del Tono, no del Borde", "body": "Las zonas (barra, lienzo, registro, cabecera y pie del composer, fila activa) se distinguen por escalón de tinta, no con contornos. `line` queda para filetes finos en flujos de lectura y marcas de registro, nunca para encerrar una tarjeta o una zona.", "section": "elevation" },
+      { "name": "La Regla del Objeto Físico", "body": "Solo proyecta sombra lo que es un objeto sobre la mesa: la hoja, el pin y lo que flota sobre ellos. Los paneles no tienen sombra.", "section": "elevation" },
+      { "name": "La Regla de la Punta", "body": "Un pin nunca tapa el punto que señala: siempre se ancla por la esquina inferior izquierda, a tamaño fijo `--spacing-pin`, sea cual sea el zoom.", "section": "shapes" }
+    ],
+    "dos": [
+      "**Do** tomar todo valor de color, radio, sombra, tipo o movimiento de `tokens.md`; añadir un token ahí primero y después en `globals.css`.",
+      "**Do** usar roles semánticos (`bg`, `surface`, `raised`, `muted`, `stage`, `action`, `mark`…) en componentes; primitivos solo para la marca y los matices de texto `ink-200`/`ink-300`.",
+      "**Do** separar zonas por escalón de tono (`desk` → `bg` → `surface` → `raised`).",
+      "**Do** escribir números, coordenadas, medidas y críticas en Geist Mono (`type-numeral`, `type-annotation`, `type-meta`) con cifras tabulares.",
+      "**Do** anclar cada pin por la punta (`--radius-pin`, esquina inferior izquierda) a tamaño fijo `--spacing-pin`.",
+      "**Do** expresar el estado resuelto como tachado, sin cambiar el rojo del pin.",
+      "**Do** mostrar coordenadas como porcentaje con un decimal y números de crítica con dos cifras (`01`).",
+      "**Do** rotular cada zona con su nombre literal."
+    ],
+    "donts": [
+      "**Don't** usar el rojo de lápiz graso para botones, enlaces, errores ni decoración; los errores van en `warn`.",
+      "**Don't** dar contorno a los botones secundarios; son tonales (`raised`).",
+      "**Don't** encerrar zonas o tarjetas con bordes, ni anidar tarjetas.",
+      "**Don't** hacer claro ningún panel de interfaz: lo claro es el escenario.",
+      "**Don't** usar valores arbitrarios de color, radio o sombra (`bg-[#…]`, `rounded-[7px]`); los de layout sí se permiten.",
+      "**Don't** escalar los pins con el zoom ni centrarlos sobre la coordenada.",
+      "**Don't** poner antetítulos o kickers sobre los titulares.",
+      "**Don't** confiar en la paleta o escalas por defecto de Tailwind: están desactivadas (`tracking-tight`, `text-gray-*` y similares no existen)."
+    ]
+  }
+}
